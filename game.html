@@ -1,0 +1,144 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Puzzle - Spiel</title>
+    <link rel="stylesheet" href="css/game.css?v=1.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="header-controls">
+                <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Musik ein/aus">
+                    <span class="music-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </span>
+                    <span class="music-state">Musik:</span>
+                </button>
+            </div>
+            <h1 class="game-title">Slide Puzzle</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <div class="stat-label">Züge</div>
+                    <div id="moves" class="stat-value">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Zeit</div>
+                    <div id="time" class="stat-value">00:00</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Modus</div>
+                    <div id="game-mode" class="stat-value">-</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Schwierigkeit</div>
+                    <div id="difficulty" class="stat-value">3x3</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="puzzle-container">
+            <div id="puzzle-board" class="puzzle-board">
+            </div>
+            <button id="preview-toggle" class="preview-toggle-btn">
+                <i class="fas fa-eye"></i> Vorschau anzeigen
+            </button>
+            <div id="preview-modal" class="preview-modal">
+                <div class="preview-modal-content">
+                    <div class="preview-modal-header">
+                        <h3>Vorschau</h3>
+                        <button id="close-preview" class="close-preview">&times;</button>
+                    </div>
+                    <div class="preview-image"></div>
+                </div>
+            </div>
+            <div id="puzzle-preview" class="puzzle-preview">
+                <div class="preview-header">Vorschau</div>
+                <div class="preview-image"></div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="shuffleBtn" class="btn btn-primary">
+                <i class="fas fa-random"></i>
+                <span>Mischen</span>
+            </button>
+            <button id="solveBtn" class="btn btn-test" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <span>Puzzle lösen</span>
+            </button>
+            <button id="menuBtn" class="btn btn-secondary">
+                <i class="fas fa-bars"></i>
+                <span>Menü</span>
+            </button>
+        </div>
+    </div>
+    
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="close-modal-btn" aria-label="Modal schließen">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Geschafft! 🎉</h2>
+                <p>Du hast das Puzzle gelöst!</p>
+            </div>
+            <div class="modal-body">
+                <div class="result-item">
+                    <span class="result-label">Züge:</span>
+                    <span id="final-moves" class="result-value">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Zeit:</span>
+                    <span id="final-time" class="result-value">00:00</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Highscore:</span>
+                    <span id="highscore" class="result-value">-</span>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="nextLevelBtn" class="btn primary-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Nächstes Level</span>
+                </button>
+                <button id="menuModalBtn" class="btn secondary-btn">
+                    <i class="fas fa-home"></i>
+                    <span>Zurück zur Startseite</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="menuModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Menü</h2>
+            </div>
+            <div class="modal-body menu-options">
+                <button id="resumeBtn" class="menu-option">
+                    <i class="fas fa-play"></i>
+                    <span>Weiterspielen</span>
+                </button>
+                <button id="restartBtn" class="menu-option">
+                    <i class="fas fa-redo"></i>
+                    <span>Neustart</span>
+                </button>
+                <button id="levelSelectBtn" class="menu-option">
+                    <i class="fas fa-list"></i>
+                    <span>Levelauswahl</span>
+                </button>
+                <button id="mainMenuBtn" class="menu-option">
+                    <i class="fas fa-home"></i>
+                    <span>Hauptmenü</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="js/audio.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

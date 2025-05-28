@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Puzzle - Levelauswahl</title>
+    <link rel="stylesheet" href="css/level-selection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header-controls">
+        <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Musik ein/aus">
+            <span class="music-icon">
+                <i class="fas fa-volume-up"></i>
+            </span>
+            <span class="music-state">Musik:</span>
+        </button>
+    </div>
+    <div class="container">
+        <div id="testModeBanner" class="test-mode-banner" style="display: none;">
+            <div class="test-mode-content">
+                <span><i class="fas fa-flask"></i> Testmodus aktiv - Alle Level freigeschaltet</span>
+                <button id="exitTestModeBtn" class="btn btn-exit-test">
+                    <i class="fas fa-sign-out-alt"></i> Testmodus beenden
+                </button>
+            </div>
+        </div>
+        <h1>Wähle dein Spiel</h1>
+        
+        <div class="game-modes">
+            <!-- Classic Mode -->
+            <div class="game-mode">
+                <div class="mode-header">
+                    <i class="fas fa-sort-numeric-up"></i>
+                    <h2>Klassisch</h2>
+                </div>
+                <p>Das traditionelle Zahlenpuzzle. Bringe die Zahlen in die richtige Reihenfolge.</p>
+                <div class="difficulty-levels">
+                    <button class="difficulty-btn" data-mode="classic" data-difficulty="3">
+                        <span class="level">3x3</span>
+                        <span class="difficulty">Einfach</span>
+                    </button>
+                    <button class="difficulty-btn locked" data-mode="classic" data-difficulty="4" disabled>
+                        <i class="fas fa-lock"></i>
+                        <span class="level">4x4</span>
+                        <span class="difficulty">Mittel</span>
+                    </button>
+                    <button class="difficulty-btn locked" data-mode="classic" data-difficulty="5" disabled>
+                        <i class="fas fa-lock"></i>
+                        <span class="level">5x5</span>
+                        <span class="difficulty">Schwer</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Pattern Mode -->
+            <div class="game-mode">
+                <div class="mode-header">
+                    <i class="fas fa-shapes"></i>
+                    <h2>Muster</h2>
+                </div>
+                <p>Löse das Puzzle mit verschiedenen Mustern anstelle von Zahlen.</p>
+                <div class="difficulty-levels">
+                    <button class="difficulty-btn locked" data-mode="pattern" data-difficulty="3" disabled>
+                        <i class="fas fa-lock"></i>
+                        <span class="level">3x3</span>
+                        <span class="difficulty">Einfach</span>
+                    </button>
+                    <button class="difficulty-btn locked" data-mode="pattern" data-difficulty="4" disabled>
+                        <i class="fas fa-lock"></i>
+                        <span class="level">4x4</span>
+                        <span class="difficulty">Mittel</span>
+                    </button>
+                    <button class="difficulty-btn locked" data-mode="pattern" data-difficulty="5" disabled>
+                        <i class="fas fa-lock"></i>
+                        <span class="level">5x5</span>
+                        <span class="difficulty">Schwer</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Image Mode -->
+            <div class="game-mode">
+                <div class="mode-header">
+                    <i class="fas fa-image"></i>
+                    <h2>Bilder</h2>
+                </div>
+                <p>Vervollständige das Bild, indem du die Teile an die richtige Position schiebst.</p>
+                <div class="difficulty-levels">
+                    <button class="difficulty-btn locked" data-mode="image" data-difficulty="3" disabled>
+                        <i class="fas fa-lock"></i>
+                        <span class="level">3x3</span>
+                        <span class="difficulty">Einfach</span>
+                    </button>
+                    <button class="difficulty-btn locked" data-mode="image" data-difficulty="4" disabled>
+                        <i class="fas fa-lock"></i>
+                        <span class="level">4x4</span>
+                        <span class="difficulty">Mittel</span>
+                    </button>
+                    <button class="difficulty-btn locked" data-mode="image" data-difficulty="5" disabled>
+                        <i class="fas fa-lock"></i>
+                        <span class="level">5x5</span>
+                        <span class="difficulty">Schwer</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <button id="backToMenuBtn" class="btn back-btn">
+            <i class="fas fa-arrow-left"></i> Zurück zur Startseite
+        </button>
+    </div>
+    
+    <script src="js/audio.js"></script>
+    <script src="js/level-selection.js"></script>
+</body>
+</html>

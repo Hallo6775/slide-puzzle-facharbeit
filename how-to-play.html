@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Puzzle - Anleitung</title>
+    <link rel="stylesheet" href="css/how-to-play.css">
+</head>
+<body>
+    <div class="header-controls">
+        <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Musik ein/aus">
+            <span class="music-icon">
+                <i class="fas fa-volume-up"></i>
+            </span>
+            <span class="music-state">Musik:</span>
+        </button>
+    </div>
+    <div class="container">
+        <h1>Anleitung</h1>
+        
+        <div class="instructions">
+            <div class="instruction-card">
+                <h2>Spielziel</h2>
+                <p>Ordne die Puzzleteile in die richtige Reihenfolge, um das Bild oder Muster zu vervollständigen.</p>
+            </div>
+            
+            <div class="instruction-card">
+                <h2>Steuerung</h2>
+                <ul>
+                    <li>Klicke auf ein angrenzendes Puzzleteil, um es mit dem leeren Feld zu tauschen</li>
+                    <li>Alternativ kannst du die Pfeiltasten verwenden, um das leere Feld zu verschieben</li>
+                </ul>
+            </div>
+            
+            <div class="instruction-card">
+                <h2>Spielmodi</h2>
+                <div class="game-modes">
+                    <div class="mode">
+                        <h3>Klassisch</h3>
+                        <p>Das traditionelle Zahlenpuzzle. Bringe die Zahlen in die richtige Reihenfolge.</p>
+                    </div>
+                    <div class="mode">
+                        <h3>Muster</h3>
+                        <p>Löse das Puzzle mit verschiedenen Mustern anstelle von Zahlen.</p>
+                    </div>
+                    <div class="mode">
+                        <h3>Bilder</h3>
+                        <p>Vervollständige das Bild, indem du die Teile an die richtige Position schiebst.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instruction-card">
+                <h2>Tipps</h2>
+                <ul>
+                    <li>Beginne mit der oberen Reihe und arbeite dich nach unten vor</li>
+                    <li>Konzentriere dich auf ein Puzzleteil nach dem anderen</li>
+                    <li>Nutze die leere Fläche strategisch, um andere Teile zu positionieren</li>
+                </ul>
+            </div>
+        </div>
+        
+        <button id="backBtn" class="btn primary">Zurück zur Startseite</button>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/back-button.js"></script>
+</body>
+</html>

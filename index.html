@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Puzzle - Startseite</title>
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/background-animations.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-controls">
+            <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Musik ein/aus">
+                <span class="music-icon">
+                    <i class="fas fa-volume-up"></i>
+                </span>
+                <span class="music-state">Musik:</span>
+            </button>
+        </div>
+        <div class="logo">
+            <h1>Slide Puzzle</h1>
+            <p>Teste dein Gedächtnis und deine Geschicklichkeit!</p>
+        </div>
+        <div class="buttons">
+            <button id="playBtn" class="btn primary">Play</button>
+            <button id="howToPlayBtn" class="btn secondary">Anleitung</button>
+        </div>
+    </div>
+    <script src="js/background-animations.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/start.js"></script>
+    
+    <button id="testModeBtn" class="test-mode-btn" title="Testmodus">
+        <i class="fas fa-flask"></i>
+        <span>Testmodus</span>
+    </button>
+</body>
+</html>
